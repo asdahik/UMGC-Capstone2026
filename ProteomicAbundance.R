@@ -1,5 +1,4 @@
 # Installing Data packages for the data analysis
-
 install.packages(c("readxl", "tidyverse", "pheatmap"))
 
 # Loading the installed packages
@@ -45,7 +44,7 @@ ggplot(top10, aes(x = reorder(Protein, CTRL_log2FC), y = CTRL_log2FC)) +
   labs(
     title = "Top 10 Protein Abundance Changes: CTRL",
     x = "Protein",
-    y = "log₂ fold change (Adapted / STRESS)"
+    y = "ADAPTED / STRESS"
   ) +
   annotate(
     "text",
@@ -67,4 +66,5 @@ ggplot(top10, aes(x = reorder(Protein, CTRL_log2FC), y = CTRL_log2FC)) +
   theme(
     plot.title = element_text(hjust = 0.5)
   )
+
 
