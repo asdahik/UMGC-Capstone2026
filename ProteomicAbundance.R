@@ -1,6 +1,5 @@
 # Installing Data packages for the data analysis
 
-install.packages("readxl")
 install.packages(c("readxl", "tidyverse", "pheatmap"))
 
 # Loading the installed packages
