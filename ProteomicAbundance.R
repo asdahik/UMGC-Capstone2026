@@ -28,9 +28,9 @@ data_plot <- data %>%
 # Calculating the protein abundance changes between STRESS and ADAPTED for every protein
 data_plot <- data_plot %>%
   mutate(
-    CTRL_log2FC = log2(CTRL_STRESS / CTRL_Adapted),
-    PEG10_log2FC = log2(PEG10_STRESS / PEG10_Adapted),
-    PEG20_log2FC = log2(PEG20_STRESS / PEG20_Adapted)
+    CTRL_log2FC = log2(CTRL_Adapted / CTRL_STRESS),
+    PEG10_log2FC = log2(PEG10_Adapted / PEG10_STRESS),
+    PEG20_log2FC = log2(PEG20_Adapted / PEG20_STRESS)
   )
 
 # Putting top 10 protein to the data - putting all protein to the data will be difficult to read
@@ -42,9 +42,30 @@ top10 <- data_plot %>%
 ggplot(top10, aes(x = reorder(Protein, CTRL_log2FC), y = CTRL_log2FC)) +
   geom_col() +
   coord_flip() +
+  geom_vline(xintercept = 0, linetype = "dashed") +
   labs(
-    title = "Top 10 protein changes: CTRL",
+    title = "Top 10 Protein Abundance Changes: CTRL",
     x = "Protein",
-    y = "log2(STRESS / Adapted)"
+    y = "log₂ fold change (Adapted / STRESS)"
   ) +
-  theme_classic()
+  annotate(
+    "text",
+    x = -Inf,
+    y = Inf,
+    label = "← Higher in STRESS",
+    hjust = -0.05,
+    vjust = 1.5
+  ) +
+  annotate(
+    "text",
+    x = Inf,
+    y = Inf,
+    label = "Higher in ADAPTED →",
+    hjust = 1.05,
+    vjust = 1.5
+  ) +
+  theme_classic() +
+  theme(
+    plot.title = element_text(hjust = 0.5)
+  )
+
