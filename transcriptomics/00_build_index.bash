@@ -117,8 +117,7 @@ else
     echo "index has already been built for potato genome"
 
 fi
-# begin cleaning using fastq with fastqc and then aggregate with multiqc?
-# trim data with fastp 
+# begin cleaning using fastp to trim data
 
 # once all data has been processed, run HISAT2
 # make sure that reference genome is specified, better to download
