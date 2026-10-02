@@ -14,6 +14,11 @@ set -euo pipefail
 # read all samples to be processed
 #SRA_LIST=$1
 
+# input index variable with param
+
+# system variable for building index with splice sites and stuff
+IDX=${1:0}
+
 PROJ_DIR=$(pwd) # run within the directory
 
 # create directory
@@ -69,34 +74,7 @@ fi
 
 ############## Step 1: Perform Index Build ##############
 
-# we have splice sites and exon sites mapped but keep them separate from index build for now
-if [ ! -f "${REF_DIR}/potato_dm_v6.1.ss" ]; then
-    
-    # python script from HISAT2 for getting splice sites .ss
-    echo
-    echo "performing HISAT2 index building: generating splice sites"
-    extract_splice_sites.py --verbose "${REF_DIR}/potato_genome_annotation.v6.1.gtf" > potato_dm_v6.1.ss
-    mv potato_dm_v6.1.ss "${REF_DIR}/potato_dm_v6.1.ss"
-
-else
-    echo
-    echo "HISAT2 splice sites already generated!" 
-
-fi
-
-
-if [ ! -f "${REF_DIR}/potato_dm_v6.1.exon" ]; then
-    
-    # python script from HISAT2 for getting exon sites .exon
-    echo
-    echo "performing HISAT2 index building: generating exon sites"
-    extract_exons.py --verbose "${REF_DIR}/potato_genome_annotation.v6.1.gtf" > potato_dm_v6.1.exon
-    mv potato_dm_v6.1.exon "${REF_DIR}/potato_dm_v6.1.exon"
-
-else
-    echo
-    echo "HISAT2 exon sites already generated!" 
-fi
+# Fast works by not getting known splice sites and exon sites for indexing
 
 # build index, but first check if the indexes are already present
 build=0
@@ -111,8 +89,7 @@ if [ $build == 1 ]; then
     echo
     echo "performing hisat2 build"
     echo
-    hisat2-build -p 4 ${REF}/potato_genome_assembly.v6.1.fa \
-                ${REF_DIR}/potato_dm_v6.1
+    hisat2-build -p 4 ${REF}/potato_genome_assembly.v6.1.fa
 
 else
     echo "index has already been built for potato genome"
