@@ -3,3 +3,4 @@ transcriptomics/results/
 srr*
 SRR*
 fasterq.tmp.*
+environment.lock.yml
