@@ -1,5 +1,6 @@
 transcriptomics/data/
 transcriptomics/results/
+transcriptomics/ref/
 srr*
 SRR*
 fasterq.tmp.*
