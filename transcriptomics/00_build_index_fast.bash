@@ -17,8 +17,6 @@ set -euo pipefail
 # input index variable with param
 
 # system variable for building index with splice sites and stuff
-IDX=${1:0}
-
 PROJ_DIR=$(pwd) # run within the directory
 
 # create directory
@@ -89,14 +87,9 @@ if [ $build == 1 ]; then
     echo
     echo "performing hisat2 build"
     echo
-    hisat2-build -p 4 ${REF}/potato_genome_assembly.v6.1.fa
+    hisat2-build -p 4 "${REF_DIR}/potato_genome_assembly.v6.1.fa" "${REF_DIR}/potato_dm_v6.1"
 
 else
     echo "index has already been built for potato genome"
 
 fi
-# begin cleaning using fastp to trim data
-
-# once all data has been processed, run HISAT2
-# make sure that reference genome is specified, better to download
-
