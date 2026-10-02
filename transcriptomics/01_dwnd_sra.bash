@@ -20,7 +20,7 @@ if [ ! -f "${RAW_DATA}/${SRA}.fastq.gz" ]; then
     # Extract then compress
     if [ ! -f "${RAW_DATA}/${SRA}.fastq" ]; then
         fasterq-dump "${SRA}" -O "${RAW_DATA}/" --split-files --threads 4 # this download might be slow
-    # remove the tmp file
+        # remove the tmp file
         rm -rf fasterq.tmp.*
     else
         echo "${SRA}.fastq is already downloaded to ${RAW_DATA}"
@@ -28,8 +28,10 @@ if [ ! -f "${RAW_DATA}/${SRA}.fastq.gz" ]; then
     fi
     #gzip the extracted file for now to save space, its close to the prefetch size
     gzip -v "${RAW_DATA}/${SRA}.fastq"
-    # once the fasterq-dump process has completed, remove the uncompressed file
-    rm -rf "${RAW_DATA}/${SRA}.fastq"
+    # once the fasterq-dump process has completed, remove the uncompressed file. ONLY REMOVE IF The FILE COMPLETELY DOWNLOADED
+    if [ -f "${RAW_DATA}/${SRA}.fastq.gz" ]; then
+        rm -rf "${RAW_DATA}/${SRA}.fastq"
+    fi
     # save the prefetched file just in case. Like sending it to a database potentially?
     #rm -rf "${RAW_DATA}/${SRA}"
 else
