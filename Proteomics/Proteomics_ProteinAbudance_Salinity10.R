@@ -34,8 +34,8 @@ plot_data <- data %>%
 ctrl_data <- data %>%
   select(
     Protein = Description,
-    Adapted = `Abundances (Grouped): CTRL, Adapted`,
-    STRESS = `Abundances (Grouped): CTRL, STRESS`
+    Adapted = `Abundances : CTRL, Adapted`,
+    STRESS = `Abundances : CTRL, STRESS`
   )
 
 top10 <- ctrl_data %>%
