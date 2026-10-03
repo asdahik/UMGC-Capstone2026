@@ -20,8 +20,8 @@ data_plot <- data %>%
 plot_data <- data %>%
   select(
     Protein = Description,
-    Adapted = `Abundances: 10% PEG, Adapted`,
-    STRESS = `Abundances: 10% PEG, STRESS`
+    Adapted = `Abundances (Grouped): 10% PEG, Adapted`,
+    STRESS = `Abundances (Grouped): 10% PEG, STRESS`
   ) %>%
   pivot_longer(
     cols = c(Adapted, STRESS),
@@ -69,4 +69,3 @@ ggplot(top10_data, aes(x = Protein, y = Abundance, fill = Condition)) +
     plot.title = element_text(hjust = 0.5),
     axis.text.y = element_text(size = 9)
   )
-
