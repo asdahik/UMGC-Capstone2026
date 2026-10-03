@@ -24,8 +24,12 @@ fi
 
 # using xargs to grab two samples at a time, can be modified to fit specifications and request access frequency permissions with NCBI
 
-#TODO: adjust project directories for scripts
+#TODO: maybe consider xargs?
 RAW_DATA_SCRIPT="${PROJ_DIR}/transcriptomics/01_dwnd_sra.bash"
-chmod -x "${RAW_DATA_SCRIPT}"
+# chmod -x "${RAW_DATA_SCRIPT}"
 # this runs the get raw data script
-xargs -a "SRR_${PRJNA}.txt" -P 2 -I{} bash "$RAW_DATA_SCRIPT" {}
+
+while read line; do
+    bash ${RAW_DATA_SCRIPT} "$line"
+done < "SRR_${PRJNA}.txt"
+# xargs -a "SRR_${PRJNA}.txt" -P 2 -I{} bash "$RAW_DATA_SCRIPT" {}

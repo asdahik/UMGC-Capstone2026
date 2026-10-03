@@ -31,9 +31,10 @@ if [ ! -f "${RAW_DATA}/${SRA}.fastq.gz" ]; then
     # once the fasterq-dump process has completed, remove the uncompressed file. ONLY REMOVE IF The FILE COMPLETELY DOWNLOADED
     if [ -f "${RAW_DATA}/${SRA}.fastq.gz" ]; then
         rm -rf "${RAW_DATA}/${SRA}.fastq"
+        # save the prefetched file just in case. Like sending it to a database potentially?
+        #rm -rf "${RAW_DATA}/${SRA}"
     fi
-    # save the prefetched file just in case. Like sending it to a database potentially?
-    #rm -rf "${RAW_DATA}/${SRA}"
+    
 else
     echo "${SRA}.fastq is already extracted"
 fi
