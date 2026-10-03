@@ -20,8 +20,8 @@ data_plot <- data %>%
 plot_data <- data %>%
   select(
     Protein = Description,
-    Adapted = `Abundances (Grouped): 10% PEG, Adapted`,
-    STRESS = `Abundances (Grouped): 10% PEG, STRESS`
+    Adapted = `Abundances: 10% PEG, Adapted`,
+    STRESS = `Abundances: 10% PEG, STRESS`
   ) %>%
   pivot_longer(
     cols = c(Adapted, STRESS),
