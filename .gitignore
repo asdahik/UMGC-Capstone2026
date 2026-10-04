@@ -1,7 +1,10 @@
-transcriptomics/data/
-transcriptomics/results/
-transcriptomics/ref/
+Transcriptomics/data/
+Transcriptomics/results/
+Transcriptomics/ref/
 srr*
 SRR*
 fasterq.tmp.*
 environment.lock.yml
+
+Proteomics/data/*
+Proteomics/results/*
