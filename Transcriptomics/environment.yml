@@ -1,0 +1,16 @@
+name: 6701-rnaseq
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python=3.11
+  - fastp
+  - fastqc
+  - multiqc
+  - hisat2
+  - kallisto
+  - samtools
+  - htslib
+  - gffread
+  - sra-tools
+  - entrez-direct
