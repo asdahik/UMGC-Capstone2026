@@ -30,6 +30,6 @@ RAW_DATA_SCRIPT="${PROJ_DIR}/transcriptomics/01_dwnd_sra.bash"
 # this runs the get raw data script
 
 while read line; do
-    bash ${RAW_DATA_SCRIPT} "$line"
+    bash ${RAW_DATA_SCRIPT} "$line" "$PRJNA"
 done < "SRR_${PRJNA}.txt"
 # xargs -a "SRR_${PRJNA}.txt" -P 2 -I{} bash "$RAW_DATA_SCRIPT" {}

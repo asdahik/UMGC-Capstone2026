@@ -20,11 +20,11 @@ set -euo pipefail
 PROJ_DIR=$(pwd) # run within the directory
 
 # create directory
-REF_DIR="${PROJ_DIR}/transcriptomics/ref"
-if [ ! -d ${REF_DIR} ]; then
-    mkdir ${REF_DIR}
-fi
 
+if [ ! -d "${PROJ_DIR}/Transcriptomics/ref" ]; then
+    mkdir "${PROJ_DIR}/Transcriptomics/ref"
+fi
+REF_DIR="${PROJ_DIR}/Transcriptomics/ref"
 echo "${REF_DIR}"
 # Check if all data has been downloaded for this particular project set
 # need to get reference genome. Using DM_1-3_516_R44_potato.v6.1.hc_gene_models.gff3 and DM_1-3_516_R44_potato_genome_assembly.v6.1.fa.gz
@@ -87,7 +87,7 @@ if [ $build == 1 ]; then
     echo
     echo "performing hisat2 build"
     echo
-    hisat2-build -p 4 "${REF_DIR}/potato_genome_assembly.v6.1.fa" "${REF_DIR}/potato_dm_v6.1"
+    hisat2-build -p 4 "${REF_DIR}/potato_dm.v6.1.fa" "${REF_DIR}/potato_dm_v6.1"
 
 else
     echo "index has already been built for potato genome"
