@@ -5,6 +5,11 @@ srr*
 SRR*
 fasterq.tmp.*
 environment.lock.yml
-
+Transcriptomics/PRJNA*
 Proteomics/data/*
 Proteomics/results/*
+GSE*
+*.r
+*.tsv
+FastQC*
+*.html
