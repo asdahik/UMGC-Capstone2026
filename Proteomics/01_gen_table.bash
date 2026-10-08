@@ -20,4 +20,5 @@ if [ ! -f "${PROT_RESULT}/${PXD}_match.tsv" ]; then
 fi
 
 # run python script to generate mascot values
+if [ ! -f "${PROT_RESULT}/${PXD}_PSM.tsv"]
 python3 $PROJ_DIR/Proteomics/02_build_psm.py "${PROT_RESULT}/${PXD}_PSM.tsv" "${PROT_DATA}/${PXD}"/*.mzid.gz

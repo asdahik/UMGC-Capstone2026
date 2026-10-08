@@ -65,7 +65,7 @@ if [ ! -d "${PROT_DATA}/${PXD}" ]; then
     while read line; do
         pridepy download-file-by-name -a ${PXD} -f ${line} -o "${PROT_DATA}/${PXD}"
     done < "${PROT_DATA}/${PXD}_MZID.txt"
-
+    
     time sleep 5
 fi
 
@@ -89,11 +89,3 @@ if [ ! -f "${PROT_RESULT}/${PXD}.mztab" ]; then
 fi
 
 #### Step 3: Generate a tsv table mapping each MZID file to the associated MGF file ####
-
-for f in "${PROT_DATA}/${PXD}/*.mzid" "${PROT_DATA}/${PXD}/*.mzid.gz"; do
-    echo $f
-    [ -e "$f" ] || continue
-    loc=$(zcat -f "$f" | grep -m1 -o '<SpectraData[^>]*location="[^"]*"' | sed 's/.*location="//; s/"$//')
-    n=$(zcat -f "$f" | grep -c '<SpectraData ')
-    echo -e "$f\t$(basename "$loc")\t$n"
-done | tee "${PROT_RESULT}/${PXD}_mzid_to_mgf.tsv"
