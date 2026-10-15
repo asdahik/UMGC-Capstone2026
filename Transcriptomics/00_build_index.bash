@@ -14,60 +14,6 @@ set -euo pipefail
 # read all samples to be processed
 #SRA_LIST=$1
 
-# system variable for building index with splice sites and stuff
-PROJ_DIR=$(pwd) # run within the directory
-
-# create directory
-
-if [ ! -d "${PROJ_DIR}/Transcriptomics/ref" ]; then
-    mkdir "${PROJ_DIR}/Transcriptomics/ref"
-fi
-REF_DIR="${PROJ_DIR}/Transcriptomics/ref"
-echo "${REF_DIR}"
-# Check if all data has been downloaded for this particular project set
-# need to get reference genome. Using DM_1-3_516_R44_potato.v6.1.hc_gene_models.gff3 and DM_1-3_516_R44_potato_genome_assembly.v6.1.fa.gz
-
-# check if genome assembly and annotation have been downloaded
-
-
-# downlaod genome assembly
-if [ ! -f "${REF_DIR}/potato_genome_assembly.v6.1.fa" ]; then
-
-    # genome assembly
-    wget https://spuddb.uga.edu/data/dm_v61/DM_1-3_516_R44_potato_genome_assembly.v6.1.fa.gz
-
-    # decompress genome
-    gunzip DM_1-3_516_R44_potato_genome_assembly.v6.1.fa.gz
-
-    # move the assembly to their respective folders
-    mv DM_1-3_516_R44_potato_genome_assembly.v6.1.fa "${REF_DIR}/potato_genome_assembly.v6.1.fa"
-
-else
-    # TODO MAKE A MORE INFORMATIVE PRINT STATEMENT
-    echo "potato genome assembly has already been downloaded"
-
-fi
-
-# download genome annotation
-if [ ! -f "${REF_DIR}/potato_genome_annotation.v6.1.gtf" ]; then
-    if [ ! -f "${REF_DIR}/potato_genome_annotation.v6.1.gff3" ]; then
-        # genome annotation
-        wget https://spuddb.uga.edu/data/dm_v61/DM_1-3_516_R44_potato.v6.1.hc_gene_models.gff3.gz
-
-        # decompress annotation
-        gunzip DM_1-3_516_R44_potato.v6.1.hc_gene_models.gff3.gz
-
-        # move the annotation to their respective folders
-        mv DM_1-3_516_R44_potato.v6.1.hc_gene_models.gff3 "${REF_DIR}/potato_genome_annotation.v6.1.gff3"
-    fi
-    # perform gffread to change gff to gtf for extract_splice_sites.py
-    gffread "${REF_DIR}/potato_genome_annotation.v6.1.gff3" -T -o "${REF_DIR}/potato_genome_annotation.v6.1.gtf"
- 
-else
-    # TODO MAKE A MORE INFORMATIVE PRINT STATEMENT
-    echo "potato genome annotation has already been downloaded"
-fi
-
 ############## Step 1: Perform Index Build ##############
 
 # we have splice sites and exon sites mapped but keep them separate from index build for now
