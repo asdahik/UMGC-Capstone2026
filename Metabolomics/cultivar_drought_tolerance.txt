@@ -1,0 +1,33 @@
+"Supplemental Table S1:Cultivar identifier, cultivar name, breeding company and drought tolerance expressed as the deviation of relative starch yield from the experimental median (DRYM) for the 31 potato cultivars used in this study."					
+Cultivar_ID	Cultivar	Breeder	drought tolerance (DRYM)		
+382	Desiree		0.02023		
+2673	Alegria	Norika	-0.03421		
+2674	Milva	Berding	-0.04791		
+2675	Saturna	Europlant	0.04093		
+2853	Ulme	Bavaria	-0.00101		
+2854	Eldena	Europlant	0.02718		
+2855	Eurobravo	Europlant	-0.03579		
+2856	Euroflora	Europlant	-0.05851		
+2857	Euronova	Europlant	-0.00867		
+2858	Euroresa	Europlant	-0.04247		
+2859	Eurostarch	Europlant	-0.00427		
+2860	Eurotango	Europlant	-0.02267		
+2861	Kuras	Europlant	-0.03698		
+2862	Tomensa	Europlant	-0.00057		
+2863	Tomba	Europlant	0.00277		
+2864	Jumbo	Firlbeck	-0.01915		
+2865	Logo	Firlbeck	-0.02109		
+2866	Maxi	Firlbeck	-0.03407		
+2867	Power	Firlbeck	0.05951		
+2868	Sommergold	Firlbeck	0.06478		
+2869	Jasia	Niehoff	-0.00908		
+2870	Albatros	Norika	0.06242		
+2871	Karlena	Norika	0.09567		
+2875	Maxilla	Norika	0.02709		
+2876	Pirol	Norika	-0.01310		
+2877	Burana	Saka	-0.00946		
+2878	Golf	Saka	0.02033		
+2879	Priamos	Saka	0.08832		
+2880	Ramses	Saka	-0.03120		
+2881	Sibu	Saka	0.05834		
+2882	Verdi	Saka	0.02720		
