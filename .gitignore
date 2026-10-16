@@ -13,3 +13,5 @@ GSE*
 *.tsv
 FastQC*
 *.html
+Metabolomics/*.xlsx
+Metabolomics/*.txt

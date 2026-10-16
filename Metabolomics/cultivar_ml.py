@@ -56,10 +56,13 @@ print(f"OOB error (training trials):\t\t{1-rf.oob_score_:.3f}")
 print(f"Accuracy on agronomic validation:\t\t{(rf.predict(Xva) == y_va).mean():.3f}")
 print(pd.DataFrame(confusion_matrix(y_va, rf.predict(Xva), labels=LEVELS),index=[f"obs_{l}" for l in LEVELS], columns=LEVELS))
 
+# with the results being outputted from RandomForestClassifier, write output to a results file
+output = open(f"{wd}/metabolome_output.txt", "w")
+output.write("Metabolite\tgini_coefficient")
 gini = pd.Series(rf.feature_importances_, index=[label[m] + f" ({m})" for m in mst])
 print("\nTop 15 metabolites (Gini importance):")
 print(gini.sort_values(ascending=False).head(15).round(4))
-
+output.write((gini.sort_values(ascending=False).head(15).round(4)).to_string())
 # ------ Honest estimate: hold out whole cultivars ------
 # Each cultivar appears in bot train and validation with the same label, so 
 # the numbers above should partly reflect recognising the cultivar. Held-out
@@ -83,6 +86,10 @@ pred, obs = np.array(pred), np.array(obs)
 base = pd.Series(y_va).value_counts(normalize=True).max()
 print(f"\nLeave-cultivar-out accuracy (agronomic): {(pred == obs).mean():.3f}"
       f"   | majority-class baseline: {base:.3f}")
- 
+output.write(f"\nLeave-cultivar-out accuracy (agronomic): {(pred == obs).mean():.3f}"
+      f"   | majority-class baseline: {base:.3f}")
+
+output.close()
+# output results 
 # Optional: permutation importance on held-out validation data (less biased than Gini)
 # pi = permutation_importance(rf, Xva, y_va, n_repeats=10, n_jobs=-1, random_state=1)
