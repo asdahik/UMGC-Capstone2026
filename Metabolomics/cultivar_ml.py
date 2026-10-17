@@ -58,7 +58,7 @@ print(pd.DataFrame(confusion_matrix(y_va, rf.predict(Xva), labels=LEVELS),index=
 
 # with the results being outputted from RandomForestClassifier, write output to a results file
 output = open(f"{wd}/metabolome_output.txt", "w")
-output.write("Metabolite\tgini_coefficient")
+output.write("Metabolite\tgini_coefficient\n")
 gini = pd.Series(rf.feature_importances_, index=[label[m] + f" ({m})" for m in mst])
 print("\nTop 15 metabolites (Gini importance):")
 print(gini.sort_values(ascending=False).head(15).round(4))
