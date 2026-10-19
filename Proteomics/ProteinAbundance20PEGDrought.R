@@ -51,7 +51,7 @@ ggplot(top10_data,
   labs(
     title = "Top 10 Protein Abundances: 20% PEG Drought",
     x = "Protein",
-    y = "Protein Abundance",
+    y = "Protein Abundance (Reported in database)",
     fill = "Condition"
   ) +
   theme_classic() +
