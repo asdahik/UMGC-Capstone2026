@@ -12,8 +12,8 @@ data <- read_excel(file.choose())
 data_plot <- data %>%
   select(
     Protein = Description,
-    PEG10_Adapted = `Abundances (Grouped): 10% PEG, Adapted`,
-    PEG10_STRESS = `Abundances (Grouped): 10% PEG, STRESS`
+    PEG10_Adapted = `Abundances: 10% PEG, Adapted`,
+    PEG10_STRESS = `Abundances: 10% PEG, STRESS`
   )
 
 # Convert the data into a format for plotting
@@ -59,9 +59,9 @@ ggplot(top10_data, aes(x = Protein, y = Abundance, fill = Condition)) +
   geom_col(position = "dodge") +
   coord_flip() +
   labs(
-    title = "Protein Abundance: 10% PEG",
+    title = "Protein Abundance: 10% PEG Drought",
     x = "Protein",
-    y = "Protein Abundance",
+    y = "Protein Abundance (Reported in Database)",
     fill = "Condition"
   ) +
   theme_classic() +
