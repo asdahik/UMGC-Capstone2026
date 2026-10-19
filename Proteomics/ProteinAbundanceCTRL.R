@@ -35,8 +35,8 @@ plot_data <- data %>%
 ctrl_data <- data %>%
   select(
     Protein = Description,
-    Adapted = `Abundances (Grouped): CTRL, Adapted`,
-    STRESS = `Abundances (Grouped): CTRL, STRESS`
+    ADAPTED_graduallly_introduced_population = `Abundances (Grouped): CTRL, Adapted`,
+    STRESS_suddently_introduced_population = `Abundances (Grouped): CTRL, STRESS`
   )
 
 top10 <- ctrl_data %>%
@@ -60,9 +60,9 @@ ggplot(top10_data, aes(x = Protein, y = Abundance, fill = Condition)) +
   geom_col(position = "dodge") +
   coord_flip() +
   labs(
-    title = "Protein Abundance: CTRL",
-    x = "Protein",
-    y = "Protein Abundance",
+    title = "Top 10 Abundant Proteins Under Adapted and Stressed Conditions (CTRL)",
+    x = "Protein names",
+    y = "Protein Abundance (amount reported in database)",
     fill = "Condition"
   ) +
   theme_classic() +
@@ -70,3 +70,4 @@ ggplot(top10_data, aes(x = Protein, y = Abundance, fill = Condition)) +
     plot.title = element_text(hjust = 0.5),
     axis.text.y = element_text(size = 9)
   )
+
