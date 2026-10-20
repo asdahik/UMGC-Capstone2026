@@ -189,7 +189,7 @@ def main(args):
         for pid in set(pid for pid,_,_ in hits):
             pep_counts[pid] += 1
 
-    top10 = pep_counts.most_common(10)
+    top10 = pep_counts.most_common(30) # expanded to thirty for heatmap reference
 
     # ---------- write tables ----------
     with open(os.path.join(outdir, "mapping_summary.tsv"), "w") as out:

@@ -15,4 +15,5 @@ ann["gene"] = ann["transcript"].str.replace(r"\.\d+$", "", regex=True)
 ann = ann.sort_values("transcript").drop_duplicates("gene")
 
 res["annotation"] = res.index.map(ann.set_index("gene")["annotation"])
+res = res.rename(columns={"A": "SpudDBGeneID"})
 res.to_csv(f"{res_dir}/deseq_results_annotated.csv")

@@ -106,3 +106,6 @@ mv DM_v6_1.working_models.gene_exp_matrix.txt potato_gene_expression_matrix.txt
 
 awk -F'\t' '{print $1 "\t" $NF}' ${REF}/potato_gene_expression_matrix.txt > ${REF}/potato_transcript_key.tsv
 
+# this is used for eggNOG-mapper annotations for transcriptomic GSEA
+wget https://spuddb.uga.edu/data/dm_v61/DM_1-3_516_R44_potato.v6.1.hc_gene_models.pep.fa.gz
+gunzip DM_1-3_516_R44_potato.v6.1.hc_gene_models.pep.fa.gz 

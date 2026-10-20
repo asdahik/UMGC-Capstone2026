@@ -11,9 +11,19 @@
 if (!require("tidyverse")) install.packages("tidyverse")
 library(tidyverse)
 
+wd <- getwd()
+args <- commandArgs(trailingOnly = TRUE)
+if (length(args) < 2) stop("Usage: gsea.r <PRJNA######>, <PXD######>")
+PRJNA  <- args[1]
+PXD <- args[2]
+#META <- args [3] leaving meta argument out as we don't have any other metabolomic data at the moment.
+trans_dir <- file.path(wd,"Transcriptomics","results",PRJNA)
+prot_dir <- file.path(wd,"Proteomics", "results", PXD)
+meta_dir <- file.path(wd, "Metabolomics", "cultivar_metabolome.txt") # this isn't a directory for right now
+
 # Setting up directory and making an Integration folder if it isn't already there
 wd <- getwd()
-integration_dir <- file.path(wd, "Integration")
+integration_dir <- file.path(wd, "Multiomics", "Integration")
 if (!dir.exists(integration_dir)) dir.create(integration_dir, recursive = TRUE)
 
 
@@ -24,17 +34,16 @@ if (!dir.exists(integration_dir)) dir.create(integration_dir, recursive = TRUE)
 
 
 # Transcriptomics data file from Google Sheet. Renamed when downloading
-rna_file <- "Transcriptomic_DESeq_PRJNA311702.csv"
-
+#rna_file <- "Transcriptomic_DESeq_PRJNA311702.csv"
 
 # Read in the transcriptomics table exported from DESeq2 script
-rna_raw <- read.csv(rna_file, stringsAsFactors = FALSE)
+rna_raw <- read.csv(file.path(trans_dir, "deseq_results_annotated.csv"), stringsAsFactors = FALSE)
 
 
 # Select and rename columns to standard 4-column format (ID, Log2FC, PValue, Omics)
 rna_clean <- rna_raw %>%
   rename(
-    ID     = SpudDB.Gene.ID,
+    ID     = SpudDBGeneID,
     Log2FC = log2FoldChange,
     PValue = padj
   ) %>%
@@ -50,45 +59,67 @@ write.csv(rna_clean, file.path(integration_dir, "transcriptomics_clean.csv"), ro
 # Proteomics 
 
 # Proteomics data file from Google Sheet 
-prot_file <- "Proteomic_Abundance.csv"
+# prot_file <- "Proteomic_Abundance.csv"
 
 # Read in the proteomics table
-prot_raw <- read.csv(prot_file, stringsAsFactors = FALSE, check.names = FALSE)
+# Proteomics
+prot_file <- file.path(prot_dir, paste0(PXD, "_Abundance.tsv"))
 
-# Pull out protein IDs, calculate log2 fold changes between stress and adapted
-# (added 1e-5 to avoid division by zero errors),
-# and scale the percentage based p-values down to 0-1 range
-  prot_clean <- prot_raw %>%
+  # The header row has one extra leading name ("Protein FDR Confidence: Combined")
+  # and data rows have one extra trailing empty field. Drop both so names line up.
+  hdr <- strsplit(readLines(prot_file, n = 1), "\t", fixed = TRUE)[[1]]
+  hdr <- trimws(hdr[-1])
+
+  prot_raw <- read.delim(prot_file, header = FALSE, skip = 1, sep = "\t",
+                        quote = "", comment.char = "", fill = TRUE,
+                        stringsAsFactors = FALSE, check.names = FALSE)
+  prot_raw <- prot_raw[, seq_along(hdr), drop = FALSE]   # drops trailing empty column
+  colnames(prot_raw) <- hdr
+
+  stress_col  <- "Abundance Ratio: (20% PEG, STRESS) / (CTRL, STRESS)"
+  adapted_col <- "Abundance Ratio: (20% PEG, Adapted) / (CTRL, Adapted)"
+  pval_col    <- "Abundance Ratio Adj. P-Value: (20% PEG, STRESS) / (CTRL, STRESS)"
+
+  missing_cols <- setdiff(c("Accession", stress_col, adapted_col, pval_col), colnames(prot_raw))
+  if (length(missing_cols) > 0) stop("Missing columns:\n", paste(missing_cols, collapse = "\n"))
+
+  prot_clean <- tibble(
+    ID            = trimws(prot_raw[["Accession"]]),
+    Stress_Ratio  = suppressWarnings(as.numeric(prot_raw[[stress_col]])),
+    Adapted_Ratio = suppressWarnings(as.numeric(prot_raw[[adapted_col]])),
+    PValue        = suppressWarnings(as.numeric(prot_raw[[pval_col]]))   # already 0-1
+  ) %>%
     mutate(
-      ID            = prot_raw[[1]], 
-      Stress_Ratio  = suppressWarnings(as.numeric(`Abundance Ratio: (20% PEG, STRESS) / (CTRL, STRESS)`)),
-      Adapted_Ratio = suppressWarnings(as.numeric(`Abundance Ratio: (20% PEG, Adapted) / (CTRL, Adapted)`)),
-      Log2FC        = log2((Stress_Ratio + 1e-5) / (Adapted_Ratio + 1e-5)),
-      # Divide by 100 to convert the percentage-scaled column into a true 0 to 1 p-value
-      PValue        = suppressWarnings(as.numeric(`Abundance Ratio Adj. P-Value: (20% PEG, STRESS) / (CTRL, STRESS)`)) / 100,
-      Omics         = "Protein"
+      Log2FC = log2((Stress_Ratio + 1e-5) / (Adapted_Ratio + 1e-5)),
+      Omics  = "Protein"
     ) %>%
     filter(!is.na(ID), ID != "", !is.na(Log2FC), !is.infinite(Log2FC)) %>%
     select(ID, Log2FC, PValue, Omics)
 
-  # Save the cleaned table into integration folder
   write.csv(prot_clean, file.path(integration_dir, "proteomics_clean.csv"), row.names = FALSE)
 
 
 # Metabolomics
   
 # Metabolomics data file from Google Sheet. Renamed when downloading
-metab_file <- "Cultivar_Metabolome.csv"
+#metab_file <- "Cultivar_Metabolome.csv"
 
   # Read in the metabolomics table. Skip the first 12  description rows 
   # so row 13 acts as the true header
-  metab_raw <- read.csv(metab_file, check.names = FALSE, skip = 12, stringsAsFactors = FALSE)
-  
+# Tab-delimited; rows 1-12 are description rows, row 13 is the true header
+metab_raw <- read.delim(meta_dir, skip = 12, header = TRUE, sep = "\t",
+                        quote = "", comment.char = "", check.names = FALSE,
+                        stringsAsFactors = FALSE, na.strings = c("NA", ""))
+
+  stopifnot("Treatment" %in% colnames(metab_raw))   # fails with a clear message if misparsed
+  message("Metabolomics dims: ", nrow(metab_raw), " x ", ncol(metab_raw))
+  print(table(tolower(trimws(metab_raw$Treatment)), useNA = "ifany"))
+
   # Pull treatment labels and make lowercase
-  treatment_col <- tolower(metab_raw[["Treatment"]])
-  
+  treatment_col <- tolower(trimws(metab_raw[["Treatment"]]))
   # Isolate just the metabolite abundance columns (starting at column 11)
-  metab_matrix  <- metab_raw[, 11:ncol(metab_raw)] 
+  metab_matrix  <- metab_raw[, 11:ncol(metab_raw), drop = FALSE]
+  
   
   # Initialize vectors to store results
   metabolite_ids <- c()
@@ -139,3 +170,25 @@ metab_file <- "Cultivar_Metabolome.csv"
   #  Save the cleaned table into integration folder
   write.csv(metab_clean, file.path(integration_dir, "metabolomics_clean.csv"), row.names = FALSE)
 
+hdr_lines <- readLines(meta_dir, n = 12)
+row_vals  <- function(i) strsplit(hdr_lines[i], "\t", fixed = TRUE)[[1]]
+idx       <- 11:(10 + ncol(metab_matrix))   # descriptor values start in column 11, like the data
+
+clean_na <- function(x) { x <- gsub('^"|"$', "", trimws(x)); x[x == "NA" | x == ""] <- NA; x }
+
+metab_map <- data.frame(
+  ID     = colnames(metab_matrix),
+  Name   = clean_na(row_vals(4)[idx]),
+  Class  = clean_na(row_vals(3)[idx]),
+  KEGG   = clean_na(row_vals(7)[idx]),
+  GMD_ID = clean_na(row_vals(11)[idx]),
+  stringsAsFactors = FALSE
+)
+
+# Where the name row just repeats the code, the analyte is unidentified
+metab_map$Annotated <- !is.na(metab_map$Name) & metab_map$Name != metab_map$ID
+
+# Sanity check: A204001-101 should show its name and KEGG ID here
+print(metab_map[metab_map$ID == "A204001-101", ])
+
+write.csv(metab_map, file.path(integration_dir, "metabolomics_annotation.csv"), row.names = FALSE)
