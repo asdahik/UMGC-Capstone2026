@@ -1,0 +1,364 @@
+2026-10-03 19:53:36,751 INFO [casanovo/MainProcess] utils.log_system_info : ======= System Information =======
+2026-10-03 19:53:36,751 INFO [casanovo/MainProcess] utils.log_system_info : Executed Command: /home/adahik/miniconda3/envs/casanovo_env/bin/casanovo sequence /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077493.mgf /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077494.mgf /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077496.mgf /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077498.mgf /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077500.mgf /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077502.mgf /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077504.mgf /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077510.mgf /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077515.mgf /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077517.mgf /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077519.mgf /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077525.mgf /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077527.mgf /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077529.mgf /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077531.mgf /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077533.mgf /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077535.mgf /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077537.mgf /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077539.mgf /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077541.mgf /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077543.mgf /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077545.mgf /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077547.mgf /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077549.mgf /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077551.mgf /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077555.mgf /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077558.mgf /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077560.mgf /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077562.mgf /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077566.mgf /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077568.mgf /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077571.mgf /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077575.mgf /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077577.mgf /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077580.mgf /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077583.mgf /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077585.mgf /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077587.mgf /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077593.mgf /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077597.mgf /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077599.mgf /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077601.mgf /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077605.mgf /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077607.mgf /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077609.mgf /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077611.mgf /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077613.mgf /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077617.mgf /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077619.mgf /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077622.mgf /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077624.mgf /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077630.mgf /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077632.mgf /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077638.mgf /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077642.mgf /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077645.mgf /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077647.mgf /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077649.mgf /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077651.mgf /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077655.mgf /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077661.mgf /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077663.mgf /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077665.mgf /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077667.mgf /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077669.mgf /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077671.mgf --output_dir /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/results --output_root PXD020259
+2026-10-03 19:53:36,752 INFO [casanovo/MainProcess] utils.log_system_info : Host Machine: DESKTOP-KFB02H3
+2026-10-03 19:53:36,752 INFO [casanovo/MainProcess] utils.log_system_info : OS: Linux
+2026-10-03 19:53:36,752 INFO [casanovo/MainProcess] utils.log_system_info : OS Version: #1 SMP PREEMPT_DYNAMIC Fri Jul 31 22:12:15 UTC 2026
+2026-10-03 19:53:36,752 INFO [casanovo/MainProcess] utils.log_system_info : Python Version: 3.13.15
+2026-10-03 19:53:36,752 INFO [casanovo/MainProcess] utils.log_system_info : Casanovo Version: 5.2.1
+2026-10-03 19:53:36,752 INFO [casanovo/MainProcess] utils.log_system_info : Depthcharge Version: 0.4.10
+2026-10-03 19:53:36,752 INFO [casanovo/MainProcess] utils.log_system_info : PyTorch Version: 2.14.0+cu130
+2026-10-03 19:53:36,845 INFO [casanovo/MainProcess] utils.log_system_info : CUDA Version: 13.0
+2026-10-03 19:53:37,072 INFO [casanovo/MainProcess] utils.log_system_info : cuDNN Version: 92400
+2026-10-03 19:53:37,089 WARNING [casanovo/MainProcess] casanovo.setup_model : No model was specified. Using the default model 'orbitrap'. To make this choice explicit, use '--model orbitrap'.
+2026-10-03 19:53:37,090 INFO [casanovo/MainProcess] casanovo._get_model_weights : Model weights file /home/adahik/.cache/casanovo/casanovo_orbitrap_v5-2-0.ckpt retrieved from local cache
+2026-10-03 19:53:37,090 INFO [casanovo/MainProcess] casanovo.setup_model : Casanovo version 5.2.1
+2026-10-03 19:53:37,091 DEBUG [casanovo/MainProcess] casanovo.setup_model : model = /home/adahik/.cache/casanovo/casanovo_orbitrap_v5-2-0.ckpt
+2026-10-03 19:53:37,091 DEBUG [casanovo/MainProcess] casanovo.setup_model : config = default
+2026-10-03 19:53:37,091 DEBUG [casanovo/MainProcess] casanovo.setup_model : output directory = /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/results
+2026-10-03 19:53:37,091 DEBUG [casanovo/MainProcess] casanovo.setup_model : output root name = PXD020259
+2026-10-03 19:53:37,091 DEBUG [casanovo/MainProcess] casanovo.setup_model : min_peptide_len = 6
+2026-10-03 19:53:37,091 DEBUG [casanovo/MainProcess] casanovo.setup_model : max_peptide_len = 100
+2026-10-03 19:53:37,091 DEBUG [casanovo/MainProcess] casanovo.setup_model : predict_batch_size = 1024
+2026-10-03 19:53:37,091 DEBUG [casanovo/MainProcess] casanovo.setup_model : top_match = 1
+2026-10-03 19:53:37,091 DEBUG [casanovo/MainProcess] casanovo.setup_model : accelerator = auto
+2026-10-03 19:53:37,091 DEBUG [casanovo/MainProcess] casanovo.setup_model : devices = None
+2026-10-03 19:53:37,091 DEBUG [casanovo/MainProcess] casanovo.setup_model : n_beams = 1
+2026-10-03 19:53:37,091 DEBUG [casanovo/MainProcess] casanovo.setup_model : precursor_mass_tol = 50.0
+2026-10-03 19:53:37,091 DEBUG [casanovo/MainProcess] casanovo.setup_model : isotope_error_range = (0, 1)
+2026-10-03 19:53:37,091 DEBUG [casanovo/MainProcess] casanovo.setup_model : enzyme = trypsin
+2026-10-03 19:53:37,091 DEBUG [casanovo/MainProcess] casanovo.setup_model : digestion = full
+2026-10-03 19:53:37,091 DEBUG [casanovo/MainProcess] casanovo.setup_model : missed_cleavages = 0
+2026-10-03 19:53:37,091 DEBUG [casanovo/MainProcess] casanovo.setup_model : max_mods = 1
+2026-10-03 19:53:37,091 DEBUG [casanovo/MainProcess] casanovo.setup_model : allowed_fixed_mods = C:C[Carbamidomethyl]
+2026-10-03 19:53:37,091 DEBUG [casanovo/MainProcess] casanovo.setup_model : allowed_var_mods = M:M[Oxidation],N:N[Deamidated],Q:Q[Deamidated],nterm:[Acetyl]-,nterm:[Carbamyl]-,nterm:[Ammonia-loss]-,nterm:[+25.980265]-
+2026-10-03 19:53:37,091 DEBUG [casanovo/MainProcess] casanovo.setup_model : random_seed = 454
+2026-10-03 19:53:37,091 DEBUG [casanovo/MainProcess] casanovo.setup_model : n_log = 1
+2026-10-03 19:53:37,091 DEBUG [casanovo/MainProcess] casanovo.setup_model : tb_summarywriter = False
+2026-10-03 19:53:37,091 DEBUG [casanovo/MainProcess] casanovo.setup_model : log_metrics = False
+2026-10-03 19:53:37,091 DEBUG [casanovo/MainProcess] casanovo.setup_model : log_every_n_steps = 50
+2026-10-03 19:53:37,091 DEBUG [casanovo/MainProcess] casanovo.setup_model : lance_dir = None
+2026-10-03 19:53:37,091 DEBUG [casanovo/MainProcess] casanovo.setup_model : val_check_interval = 50000
+2026-10-03 19:53:37,091 DEBUG [casanovo/MainProcess] casanovo.setup_model : min_peaks = 20
+2026-10-03 19:53:37,091 DEBUG [casanovo/MainProcess] casanovo.setup_model : max_peaks = 150
+2026-10-03 19:53:37,091 DEBUG [casanovo/MainProcess] casanovo.setup_model : min_mz = 50.0
+2026-10-03 19:53:37,091 DEBUG [casanovo/MainProcess] casanovo.setup_model : max_mz = 2500.0
+2026-10-03 19:53:37,091 DEBUG [casanovo/MainProcess] casanovo.setup_model : min_intensity = 0.01
+2026-10-03 19:53:37,091 DEBUG [casanovo/MainProcess] casanovo.setup_model : remove_precursor_tol = 2.0
+2026-10-03 19:53:37,091 DEBUG [casanovo/MainProcess] casanovo.setup_model : max_charge = 4
+2026-10-03 19:53:37,091 DEBUG [casanovo/MainProcess] casanovo.setup_model : dim_model = 512
+2026-10-03 19:53:37,091 DEBUG [casanovo/MainProcess] casanovo.setup_model : n_head = 8
+2026-10-03 19:53:37,091 DEBUG [casanovo/MainProcess] casanovo.setup_model : dim_feedforward = 1024
+2026-10-03 19:53:37,091 DEBUG [casanovo/MainProcess] casanovo.setup_model : n_layers = 9
+2026-10-03 19:53:37,091 DEBUG [casanovo/MainProcess] casanovo.setup_model : dropout = 0.0
+2026-10-03 19:53:37,091 DEBUG [casanovo/MainProcess] casanovo.setup_model : dim_intensity = None
+2026-10-03 19:53:37,091 DEBUG [casanovo/MainProcess] casanovo.setup_model : warmup_iters = 100000
+2026-10-03 19:53:37,091 DEBUG [casanovo/MainProcess] casanovo.setup_model : cosine_schedule_period_iters = 600000
+2026-10-03 19:53:37,091 DEBUG [casanovo/MainProcess] casanovo.setup_model : learning_rate = 0.0005
+2026-10-03 19:53:37,091 DEBUG [casanovo/MainProcess] casanovo.setup_model : weight_decay = 1e-05
+2026-10-03 19:53:37,091 DEBUG [casanovo/MainProcess] casanovo.setup_model : train_label_smoothing = 0.01
+2026-10-03 19:53:37,091 DEBUG [casanovo/MainProcess] casanovo.setup_model : train_batch_size = 32
+2026-10-03 19:53:37,091 DEBUG [casanovo/MainProcess] casanovo.setup_model : max_epochs = 30
+2026-10-03 19:53:37,091 DEBUG [casanovo/MainProcess] casanovo.setup_model : shuffle = True
+2026-10-03 19:53:37,091 DEBUG [casanovo/MainProcess] casanovo.setup_model : shuffle_buffer_size = 10000
+2026-10-03 19:53:37,091 DEBUG [casanovo/MainProcess] casanovo.setup_model : num_sanity_val_steps = 0
+2026-10-03 19:53:37,091 DEBUG [casanovo/MainProcess] casanovo.setup_model : calculate_precision = False
+2026-10-03 19:53:37,091 DEBUG [casanovo/MainProcess] casanovo.setup_model : accumulate_grad_batches = 1
+2026-10-03 19:53:37,091 DEBUG [casanovo/MainProcess] casanovo.setup_model : gradient_clip_val = 1.0
+2026-10-03 19:53:37,091 DEBUG [casanovo/MainProcess] casanovo.setup_model : gradient_clip_algorithm = norm
+2026-10-03 19:53:37,091 DEBUG [casanovo/MainProcess] casanovo.setup_model : precision = 32-true
+2026-10-03 19:53:37,091 DEBUG [casanovo/MainProcess] casanovo.setup_model : replace_isoleucine_with_leucine = True
+2026-10-03 19:53:37,091 DEBUG [casanovo/MainProcess] casanovo.setup_model : massivekb_tokenizer = False
+2026-10-03 19:53:37,091 DEBUG [casanovo/MainProcess] casanovo.setup_model : residues = {'G': 57.021464, 'A': 71.037114, 'S': 87.032028, 'P': 97.052764, 'V': 99.068414, 'T': 101.04767, 'C[Carbamidomethyl]': 160.030649, 'L': 113.084064, 'I': 113.084064, 'N': 114.042927, 'D': 115.026943, 'Q': 128.058578, 'K': 128.094963, 'E': 129.042593, 'M': 131.040485, 'H': 137.058912, 'F': 147.068414, 'R': 156.101111, 'Y': 163.063329, 'W': 186.079313, 'M[Oxidation]': 147.0354, 'N[Deamidated]': 115.026943, 'Q[Deamidated]': 129.042594, '[Acetyl]-': 42.010565, '[Carbamyl]-': 43.005814, '[Ammonia-loss]-': -17.026549, '[+25.980265]-': 25.980265}
+2026-10-03 19:53:37,092 DEBUG [casanovo/MainProcess] casanovo.setup_model : new_token_init = {}
+2026-10-03 19:53:37,092 DEBUG [casanovo/MainProcess] casanovo.setup_model : n_workers = 0
+2026-10-03 19:53:37,095 INFO [casanovo/MainProcess] casanovo.sequence : Sequencing peptides from:
+2026-10-03 19:53:37,095 INFO [casanovo/MainProcess] casanovo.sequence :   /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077493.mgf
+2026-10-03 19:53:37,095 INFO [casanovo/MainProcess] casanovo.sequence :   /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077494.mgf
+2026-10-03 19:53:37,095 INFO [casanovo/MainProcess] casanovo.sequence :   /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077496.mgf
+2026-10-03 19:53:37,095 INFO [casanovo/MainProcess] casanovo.sequence :   /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077498.mgf
+2026-10-03 19:53:37,095 INFO [casanovo/MainProcess] casanovo.sequence :   /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077500.mgf
+2026-10-03 19:53:37,095 INFO [casanovo/MainProcess] casanovo.sequence :   /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077502.mgf
+2026-10-03 19:53:37,095 INFO [casanovo/MainProcess] casanovo.sequence :   /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077504.mgf
+2026-10-03 19:53:37,096 INFO [casanovo/MainProcess] casanovo.sequence :   /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077510.mgf
+2026-10-03 19:53:37,096 INFO [casanovo/MainProcess] casanovo.sequence :   /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077515.mgf
+2026-10-03 19:53:37,096 INFO [casanovo/MainProcess] casanovo.sequence :   /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077517.mgf
+2026-10-03 19:53:37,096 INFO [casanovo/MainProcess] casanovo.sequence :   /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077519.mgf
+2026-10-03 19:53:37,096 INFO [casanovo/MainProcess] casanovo.sequence :   /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077525.mgf
+2026-10-03 19:53:37,096 INFO [casanovo/MainProcess] casanovo.sequence :   /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077527.mgf
+2026-10-03 19:53:37,096 INFO [casanovo/MainProcess] casanovo.sequence :   /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077529.mgf
+2026-10-03 19:53:37,096 INFO [casanovo/MainProcess] casanovo.sequence :   /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077531.mgf
+2026-10-03 19:53:37,096 INFO [casanovo/MainProcess] casanovo.sequence :   /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077533.mgf
+2026-10-03 19:53:37,096 INFO [casanovo/MainProcess] casanovo.sequence :   /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077535.mgf
+2026-10-03 19:53:37,096 INFO [casanovo/MainProcess] casanovo.sequence :   /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077537.mgf
+2026-10-03 19:53:37,096 INFO [casanovo/MainProcess] casanovo.sequence :   /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077539.mgf
+2026-10-03 19:53:37,097 INFO [casanovo/MainProcess] casanovo.sequence :   /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077541.mgf
+2026-10-03 19:53:37,097 INFO [casanovo/MainProcess] casanovo.sequence :   /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077543.mgf
+2026-10-03 19:53:37,097 INFO [casanovo/MainProcess] casanovo.sequence :   /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077545.mgf
+2026-10-03 19:53:37,097 INFO [casanovo/MainProcess] casanovo.sequence :   /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077547.mgf
+2026-10-03 19:53:37,097 INFO [casanovo/MainProcess] casanovo.sequence :   /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077549.mgf
+2026-10-03 19:53:37,097 INFO [casanovo/MainProcess] casanovo.sequence :   /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077551.mgf
+2026-10-03 19:53:37,097 INFO [casanovo/MainProcess] casanovo.sequence :   /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077555.mgf
+2026-10-03 19:53:37,097 INFO [casanovo/MainProcess] casanovo.sequence :   /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077558.mgf
+2026-10-03 19:53:37,097 INFO [casanovo/MainProcess] casanovo.sequence :   /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077560.mgf
+2026-10-03 19:53:37,097 INFO [casanovo/MainProcess] casanovo.sequence :   /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077562.mgf
+2026-10-03 19:53:37,097 INFO [casanovo/MainProcess] casanovo.sequence :   /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077566.mgf
+2026-10-03 19:53:37,098 INFO [casanovo/MainProcess] casanovo.sequence :   /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077568.mgf
+2026-10-03 19:53:37,098 INFO [casanovo/MainProcess] casanovo.sequence :   /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077571.mgf
+2026-10-03 19:53:37,098 INFO [casanovo/MainProcess] casanovo.sequence :   /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077575.mgf
+2026-10-03 19:53:37,098 INFO [casanovo/MainProcess] casanovo.sequence :   /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077577.mgf
+2026-10-03 19:53:37,098 INFO [casanovo/MainProcess] casanovo.sequence :   /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077580.mgf
+2026-10-03 19:53:37,098 INFO [casanovo/MainProcess] casanovo.sequence :   /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077583.mgf
+2026-10-03 19:53:37,098 INFO [casanovo/MainProcess] casanovo.sequence :   /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077585.mgf
+2026-10-03 19:53:37,098 INFO [casanovo/MainProcess] casanovo.sequence :   /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077587.mgf
+2026-10-03 19:53:37,098 INFO [casanovo/MainProcess] casanovo.sequence :   /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077593.mgf
+2026-10-03 19:53:37,098 INFO [casanovo/MainProcess] casanovo.sequence :   /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077597.mgf
+2026-10-03 19:53:37,098 INFO [casanovo/MainProcess] casanovo.sequence :   /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077599.mgf
+2026-10-03 19:53:37,099 INFO [casanovo/MainProcess] casanovo.sequence :   /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077601.mgf
+2026-10-03 19:53:37,099 INFO [casanovo/MainProcess] casanovo.sequence :   /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077605.mgf
+2026-10-03 19:53:37,099 INFO [casanovo/MainProcess] casanovo.sequence :   /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077607.mgf
+2026-10-03 19:53:37,099 INFO [casanovo/MainProcess] casanovo.sequence :   /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077609.mgf
+2026-10-03 19:53:37,099 INFO [casanovo/MainProcess] casanovo.sequence :   /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077611.mgf
+2026-10-03 19:53:37,099 INFO [casanovo/MainProcess] casanovo.sequence :   /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077613.mgf
+2026-10-03 19:53:37,099 INFO [casanovo/MainProcess] casanovo.sequence :   /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077617.mgf
+2026-10-03 19:53:37,099 INFO [casanovo/MainProcess] casanovo.sequence :   /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077619.mgf
+2026-10-03 19:53:37,099 INFO [casanovo/MainProcess] casanovo.sequence :   /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077622.mgf
+2026-10-03 19:53:37,099 INFO [casanovo/MainProcess] casanovo.sequence :   /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077624.mgf
+2026-10-03 19:53:37,100 INFO [casanovo/MainProcess] casanovo.sequence :   /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077630.mgf
+2026-10-03 19:53:37,100 INFO [casanovo/MainProcess] casanovo.sequence :   /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077632.mgf
+2026-10-03 19:53:37,100 INFO [casanovo/MainProcess] casanovo.sequence :   /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077638.mgf
+2026-10-03 19:53:37,100 INFO [casanovo/MainProcess] casanovo.sequence :   /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077642.mgf
+2026-10-03 19:53:37,100 INFO [casanovo/MainProcess] casanovo.sequence :   /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077645.mgf
+2026-10-03 19:53:37,100 INFO [casanovo/MainProcess] casanovo.sequence :   /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077647.mgf
+2026-10-03 19:53:37,100 INFO [casanovo/MainProcess] casanovo.sequence :   /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077649.mgf
+2026-10-03 19:53:37,100 INFO [casanovo/MainProcess] casanovo.sequence :   /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077651.mgf
+2026-10-03 19:53:37,100 INFO [casanovo/MainProcess] casanovo.sequence :   /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077655.mgf
+2026-10-03 19:53:37,100 INFO [casanovo/MainProcess] casanovo.sequence :   /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077661.mgf
+2026-10-03 19:53:37,100 INFO [casanovo/MainProcess] casanovo.sequence :   /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077663.mgf
+2026-10-03 19:53:37,100 INFO [casanovo/MainProcess] casanovo.sequence :   /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077665.mgf
+2026-10-03 19:53:37,101 INFO [casanovo/MainProcess] casanovo.sequence :   /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077667.mgf
+2026-10-03 19:53:37,101 INFO [casanovo/MainProcess] casanovo.sequence :   /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077669.mgf
+2026-10-03 19:53:37,101 INFO [casanovo/MainProcess] casanovo.sequence :   /home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics/data/tmp/F077671.mgf
+2026-10-03 19:53:48,210 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 53 spectra with invalid information.Last error was: 
+ Insufficient number of peaks
+2026-10-03 19:53:48,210 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 53 spectra with invalid information.Last error was: 
+ Insufficient number of peaks
+2026-10-03 19:53:48,838 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 101 spectra with invalid information.Last error was: 
+ Insufficient number of peaks
+2026-10-03 19:53:48,838 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 101 spectra with invalid information.Last error was: 
+ Insufficient number of peaks
+2026-10-03 19:53:49,403 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 57 spectra with invalid information.Last error was: 
+ Insufficient number of peaks
+2026-10-03 19:53:49,403 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 57 spectra with invalid information.Last error was: 
+ Insufficient number of peaks
+2026-10-03 19:53:49,846 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 81 spectra with invalid information.Last error was: 
+ Insufficient number of peaks
+2026-10-03 19:53:49,846 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 81 spectra with invalid information.Last error was: 
+ Insufficient number of peaks
+2026-10-03 19:53:50,302 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 85 spectra with invalid information.Last error was: 
+ Insufficient number of peaks
+2026-10-03 19:53:50,302 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 85 spectra with invalid information.Last error was: 
+ Insufficient number of peaks
+2026-10-03 19:53:50,792 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 98 spectra with invalid information.Last error was: 
+ Insufficient number of peaks
+2026-10-03 19:53:50,792 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 98 spectra with invalid information.Last error was: 
+ Insufficient number of peaks
+2026-10-03 19:53:51,300 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 82 spectra with invalid information.Last error was: 
+ Insufficient number of peaks
+2026-10-03 19:53:51,300 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 82 spectra with invalid information.Last error was: 
+ Insufficient number of peaks
+2026-10-03 19:53:51,839 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 56 spectra with invalid information.Last error was: 
+ Insufficient number of peaks
+2026-10-03 19:53:51,839 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 56 spectra with invalid information.Last error was: 
+ Insufficient number of peaks
+2026-10-03 19:53:52,351 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 75 spectra with invalid information.Last error was: 
+ Insufficient number of peaks
+2026-10-03 19:53:52,351 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 75 spectra with invalid information.Last error was: 
+ Insufficient number of peaks
+2026-10-03 19:53:52,761 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 91 spectra with invalid information.Last error was: 
+ Invalid precursor charge.
+2026-10-03 19:53:52,761 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 91 spectra with invalid information.Last error was: 
+ Invalid precursor charge.
+2026-10-03 19:53:53,183 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 103 spectra with invalid information.Last error was: 
+ Insufficient number of peaks
+2026-10-03 19:53:53,183 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 103 spectra with invalid information.Last error was: 
+ Insufficient number of peaks
+2026-10-03 19:53:53,633 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 72 spectra with invalid information.Last error was: 
+ Insufficient number of peaks
+2026-10-03 19:53:53,633 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 72 spectra with invalid information.Last error was: 
+ Insufficient number of peaks
+2026-10-03 19:53:54,588 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 62 spectra with invalid information.Last error was: 
+ Insufficient number of peaks
+2026-10-03 19:53:54,588 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 62 spectra with invalid information.Last error was: 
+ Insufficient number of peaks
+2026-10-03 19:53:55,155 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 51 spectra with invalid information.Last error was: 
+ Insufficient number of peaks
+2026-10-03 19:53:55,155 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 51 spectra with invalid information.Last error was: 
+ Insufficient number of peaks
+2026-10-03 19:53:55,688 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 73 spectra with invalid information.Last error was: 
+ Insufficient number of peaks
+2026-10-03 19:53:55,688 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 73 spectra with invalid information.Last error was: 
+ Insufficient number of peaks
+2026-10-03 19:53:56,238 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 50 spectra with invalid information.Last error was: 
+ Invalid precursor charge.
+2026-10-03 19:53:56,238 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 50 spectra with invalid information.Last error was: 
+ Invalid precursor charge.
+2026-10-03 19:53:56,648 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 77 spectra with invalid information.Last error was: 
+ Insufficient number of peaks
+2026-10-03 19:53:56,648 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 77 spectra with invalid information.Last error was: 
+ Insufficient number of peaks
+2026-10-03 19:53:57,097 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 70 spectra with invalid information.Last error was: 
+ Insufficient number of peaks
+2026-10-03 19:53:57,097 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 70 spectra with invalid information.Last error was: 
+ Insufficient number of peaks
+2026-10-03 19:53:58,022 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 99 spectra with invalid information.Last error was: 
+ Insufficient number of peaks
+2026-10-03 19:53:58,022 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 99 spectra with invalid information.Last error was: 
+ Insufficient number of peaks
+2026-10-03 19:53:58,381 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 105 spectra with invalid information.Last error was: 
+ Insufficient number of peaks
+2026-10-03 19:53:58,381 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 105 spectra with invalid information.Last error was: 
+ Insufficient number of peaks
+2026-10-03 19:53:58,820 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 58 spectra with invalid information.Last error was: 
+ Insufficient number of peaks
+2026-10-03 19:53:58,820 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 58 spectra with invalid information.Last error was: 
+ Insufficient number of peaks
+2026-10-03 19:53:59,302 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 87 spectra with invalid information.Last error was: 
+ Invalid precursor charge.
+2026-10-03 19:53:59,302 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 87 spectra with invalid information.Last error was: 
+ Invalid precursor charge.
+2026-10-03 19:53:59,840 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 83 spectra with invalid information.Last error was: 
+ Insufficient number of peaks
+2026-10-03 19:53:59,840 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 83 spectra with invalid information.Last error was: 
+ Insufficient number of peaks
+2026-10-03 19:54:00,325 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 133 spectra with invalid information.Last error was: 
+ Invalid precursor charge.
+2026-10-03 19:54:00,325 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 133 spectra with invalid information.Last error was: 
+ Invalid precursor charge.
+2026-10-03 19:54:00,907 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 40 spectra with invalid information.Last error was: 
+ Insufficient number of peaks
+2026-10-03 19:54:00,907 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 40 spectra with invalid information.Last error was: 
+ Insufficient number of peaks
+2026-10-03 19:54:01,912 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 88 spectra with invalid information.Last error was: 
+ Insufficient number of peaks
+2026-10-03 19:54:01,912 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 88 spectra with invalid information.Last error was: 
+ Insufficient number of peaks
+2026-10-03 19:54:03,411 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 48 spectra with invalid information.Last error was: 
+ Insufficient number of peaks
+2026-10-03 19:54:03,411 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 48 spectra with invalid information.Last error was: 
+ Insufficient number of peaks
+2026-10-03 19:54:03,870 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 71 spectra with invalid information.Last error was: 
+ Insufficient number of peaks
+2026-10-03 19:54:03,870 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 71 spectra with invalid information.Last error was: 
+ Insufficient number of peaks
+2026-10-03 19:54:04,375 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 52 spectra with invalid information.Last error was: 
+ Insufficient number of peaks
+2026-10-03 19:54:04,375 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 52 spectra with invalid information.Last error was: 
+ Insufficient number of peaks
+2026-10-03 19:54:05,434 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 64 spectra with invalid information.Last error was: 
+ Insufficient number of peaks
+2026-10-03 19:54:05,434 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 64 spectra with invalid information.Last error was: 
+ Insufficient number of peaks
+2026-10-03 19:54:05,900 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 67 spectra with invalid information.Last error was: 
+ Insufficient number of peaks
+2026-10-03 19:54:05,900 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 67 spectra with invalid information.Last error was: 
+ Insufficient number of peaks
+2026-10-03 19:54:06,518 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 60 spectra with invalid information.Last error was: 
+ Invalid precursor charge.
+2026-10-03 19:54:06,518 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 60 spectra with invalid information.Last error was: 
+ Invalid precursor charge.
+2026-10-03 19:54:07,389 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 114 spectra with invalid information.Last error was: 
+ Invalid precursor charge.
+2026-10-03 19:54:07,389 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 114 spectra with invalid information.Last error was: 
+ Invalid precursor charge.
+2026-10-03 19:54:07,860 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 56 spectra with invalid information.Last error was: 
+ Invalid precursor charge.
+2026-10-03 19:54:07,860 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 56 spectra with invalid information.Last error was: 
+ Invalid precursor charge.
+2026-10-03 19:54:08,718 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 134 spectra with invalid information.Last error was: 
+ Insufficient number of peaks
+2026-10-03 19:54:08,718 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 134 spectra with invalid information.Last error was: 
+ Insufficient number of peaks
+2026-10-03 19:54:09,783 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 175 spectra with invalid information.Last error was: 
+ Insufficient number of peaks
+2026-10-03 19:54:09,783 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 175 spectra with invalid information.Last error was: 
+ Insufficient number of peaks
+2026-10-03 19:54:10,213 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 99 spectra with invalid information.Last error was: 
+ Invalid precursor charge.
+2026-10-03 19:54:10,213 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 99 spectra with invalid information.Last error was: 
+ Invalid precursor charge.
+2026-10-03 19:54:11,102 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 55 spectra with invalid information.Last error was: 
+ Invalid precursor charge.
+2026-10-03 19:54:11,102 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 55 spectra with invalid information.Last error was: 
+ Invalid precursor charge.
+2026-10-03 19:54:11,588 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 85 spectra with invalid information.Last error was: 
+ Invalid precursor charge.
+2026-10-03 19:54:11,588 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 85 spectra with invalid information.Last error was: 
+ Invalid precursor charge.
+2026-10-03 19:54:12,975 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 90 spectra with invalid information.Last error was: 
+ Invalid precursor charge.
+2026-10-03 19:54:12,975 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 90 spectra with invalid information.Last error was: 
+ Invalid precursor charge.
+2026-10-03 19:54:13,839 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 101 spectra with invalid information.Last error was: 
+ Invalid precursor charge.
+2026-10-03 19:54:13,839 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 101 spectra with invalid information.Last error was: 
+ Invalid precursor charge.
+2026-10-03 19:54:14,234 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 110 spectra with invalid information.Last error was: 
+ Insufficient number of peaks
+2026-10-03 19:54:14,234 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 110 spectra with invalid information.Last error was: 
+ Insufficient number of peaks
+2026-10-03 19:54:14,770 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 92 spectra with invalid information.Last error was: 
+ Insufficient number of peaks
+2026-10-03 19:54:14,770 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 92 spectra with invalid information.Last error was: 
+ Insufficient number of peaks
+2026-10-03 19:54:15,183 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 122 spectra with invalid information.Last error was: 
+ Invalid precursor charge.
+2026-10-03 19:54:15,183 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 122 spectra with invalid information.Last error was: 
+ Invalid precursor charge.
+2026-10-03 19:54:15,623 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 79 spectra with invalid information.Last error was: 
+ Invalid precursor charge.
+2026-10-03 19:54:15,623 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 79 spectra with invalid information.Last error was: 
+ Invalid precursor charge.
+2026-10-03 19:54:16,108 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 71 spectra with invalid information.Last error was: 
+ Invalid precursor charge.
+2026-10-03 19:54:16,108 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 71 spectra with invalid information.Last error was: 
+ Invalid precursor charge.
+2026-10-03 19:54:16,583 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 82 spectra with invalid information.Last error was: 
+ Invalid precursor charge.
+2026-10-03 19:54:16,583 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 82 spectra with invalid information.Last error was: 
+ Invalid precursor charge.
+2026-10-03 19:54:17,483 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 88 spectra with invalid information.Last error was: 
+ Invalid precursor charge.
+2026-10-03 19:54:17,483 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 88 spectra with invalid information.Last error was: 
+ Invalid precursor charge.
+2026-10-03 19:54:18,068 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 148 spectra with invalid information.Last error was: 
+ Invalid precursor charge.
+2026-10-03 19:54:18,068 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 148 spectra with invalid information.Last error was: 
+ Invalid precursor charge.
+2026-10-03 19:54:19,325 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 277 spectra with invalid information.Last error was: 
+ Invalid precursor charge.
+2026-10-03 19:54:19,325 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 277 spectra with invalid information.Last error was: 
+ Invalid precursor charge.
+2026-10-03 19:54:20,713 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 75 spectra with invalid information.Last error was: 
+ Invalid precursor charge.
+2026-10-03 19:54:20,713 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : UserWarning: Skipped 75 spectra with invalid information.Last error was: 
+ Invalid precursor charge.
+2026-10-03 19:54:20,721 INFO [casanovo/MainProcess] dataloaders.setup : Test dataset contains 135240 spectra.
+2026-10-03 19:54:21,216 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : /home/adahik/miniconda3/envs/casanovo_env/lib/python3.13/site-packages/lightning/pytorch/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.
+
+2026-10-03 19:54:21,216 WARNING [py.warnings/MainProcess] warnings._showwarnmsg : /home/adahik/miniconda3/envs/casanovo_env/lib/python3.13/site-packages/lightning/pytorch/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.
+
+2026-10-03 20:10:23,675 INFO [casanovo/MainProcess] utils.log_run_report : ======= End of Run Report =======
+2026-10-03 20:10:23,676 INFO [casanovo/MainProcess] utils.log_run_report : Run Start Time: 26/10/03 19:53:36
+2026-10-03 20:10:23,676 INFO [casanovo/MainProcess] utils.log_run_report : Run End Time: 26/10/03 20:10:23
+2026-10-03 20:10:23,676 INFO [casanovo/MainProcess] utils.log_run_report : Time Elapsed: 0:16:46.924094
+2026-10-03 20:10:23,676 INFO [casanovo/MainProcess] utils.log_run_report : Max GPU Memory Utilization: 2080 MiB
+2026-10-03 20:16:40,660 INFO [casanovo/MainProcess] utils.log_annotate_report : Sequenced 135102 spectra
+2026-10-03 20:16:40,660 INFO [casanovo/MainProcess] utils.log_annotate_report : Score Distribution:
+2026-10-03 20:16:40,660 INFO [casanovo/MainProcess] utils.log_annotate_report : 135102 spectra (100.00%) scored ≥ 0.00
+2026-10-03 20:16:40,660 INFO [casanovo/MainProcess] utils.log_annotate_report : 62552 spectra (46.30%) scored ≥ 0.50
+2026-10-03 20:16:40,660 INFO [casanovo/MainProcess] utils.log_annotate_report : 13844 spectra (10.25%) scored ≥ 0.90
+2026-10-03 20:16:40,660 INFO [casanovo/MainProcess] utils.log_annotate_report : 0 spectra (0.00%) scored ≥ 0.95
+2026-10-03 20:16:40,660 INFO [casanovo/MainProcess] utils.log_annotate_report : 0 spectra (0.00%) scored ≥ 0.99
+2026-10-03 20:16:40,661 INFO [casanovo/MainProcess] utils.log_annotate_report : Min Peptide Length: 5
+2026-10-03 20:16:40,661 INFO [casanovo/MainProcess] utils.log_annotate_report : Max Peptide Length: 87
+2026-10-03 20:16:40,661 INFO [casanovo/MainProcess] utils.log_annotate_report : Median Peptide Length: 11
