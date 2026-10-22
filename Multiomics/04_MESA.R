@@ -191,7 +191,7 @@ read_layer <- function(path, tag) {
 layers <- list(
   read_layer(if (!is.na(PRJNA)) file.path(mo_dir, paste0(PRJNA, "_gsea_KEGG.csv")) else NA, "RNA"),
   read_layer(file.path(wd, "Multiomics", "results",
-                       "proteomics_GSEA_KEGG.csv"), "Protein"),
+                       paste0(PXD,"_proteomics_GSEA_KEGG.csv")), "Protein"),
   read_layer(file.path(mo_dir, "metabolite_gsea_KEGG.csv"), "Metabolite")
 )
 layers <- Filter(Negate(is.null), layers)
