@@ -15,3 +15,7 @@ FastQC*
 *.html
 Metabolomics/*.xlsx
 Metabolomics/*.txt
+Multiomics/Integration/*
+Multiomics/results/*
+*.csv
+*.pdf
