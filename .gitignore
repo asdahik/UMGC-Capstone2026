@@ -19,3 +19,5 @@ Multiomics/Integration/*
 Multiomics/results/*
 *.csv
 *.pdf
+Proteogenomics/results/*
+Proteogenomics/data/*
