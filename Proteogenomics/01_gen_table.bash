@@ -4,8 +4,8 @@ PXD=$1
 PROJ_DIR=$(pwd)
 
 # create data and result directories
-PROT_DATA=$PROJ_DIR/Proteomics/data
-PROT_RESULT=$PROJ_DIR/Proteomics/results
+PROT_DATA=$PROJ_DIR/Proteogenomics/data
+PROT_RESULT=$PROJ_DIR/Proteogenomics/results
 
 if [ ! -f "${PROT_RESULT}/${PXD}_match.tsv" ]; then
     for f in "${PROT_DATA}/${PXD}"/*.mzid "${PROT_DATA}/${PXD}"/*.mzid.gz; do
@@ -21,4 +21,4 @@ fi
 
 # run python script to generate mascot values
 if [ ! -f "${PROT_RESULT}/${PXD}_PSM.tsv"]
-python3 $PROJ_DIR/Proteomics/02_build_psm.py "${PROT_RESULT}/${PXD}_PSM.tsv" "${PROT_DATA}/${PXD}"/*.mzid.gz
+python3 $PROJ_DIR/Proteogenomics/02_build_psm.py "${PROT_RESULT}/${PXD}_PSM.tsv" "${PROT_DATA}/${PXD}"/*.mzid.gz

@@ -10,8 +10,8 @@ PXD=$1
 PROJ_DIR=$(pwd)
 
 # create data and result directories
-PROT_DATA=$PROJ_DIR/Proteomics/data
-PROT_RESULT=$PROJ_DIR/Proteomics/results
+PROT_DATA=$PROJ_DIR/Proteogenomics/data
+PROT_RESULT=$PROJ_DIR/Proteogenomics/results
 #wget -r -np -nd -c -A "*.mgf,*.mgf.gz,*mgf.zip" \ 
 #    -P ${PROJ_DIR}/data \
 #    https://ftp.pride.ebi.ac.uk/pride/data/archive/2020/07/PXD020259/ 

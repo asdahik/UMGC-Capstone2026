@@ -5,7 +5,8 @@ from collections import defaultdict
 from pathlib import Path
 
 PXD = sys.argv[1]
-proj = Path("/home/adahik/BIOT6701/UMGC-Capstone2026/Proteomics")
+cd = Path.cwd()
+proj = Path(cd/"Proteogenomics") # removing hard paths
 psm_file = proj / "results" / f"{PXD}_PSM.tsv"
 mgf_dir  = proj / "data" / PXD
 out_file = proj / "results" / f"{PXD}_MS_table.tsv"
