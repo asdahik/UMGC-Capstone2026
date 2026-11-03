@@ -1,9 +1,10 @@
 #!/bin/bash
 
 PRJNA=$1
+FILE_NAME=$2
 PROJ_DIR=$(pwd)/Transcriptomics
 REF=${PROJ_DIR}/ref
-RESULTS=${PROJ_DIR}/results/${PRJNA}
+RESULTS=${PROJ_DIR}/results/${PRJNA}/${FILE_NAME}
 
 # run DESeq2
 echo "running DESeq2 script"

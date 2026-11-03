@@ -131,7 +131,7 @@ fit_deseq <- function(idx) {
                               design = ~ experiment + Cultivar + treatment)
   d <- d[rowSums(counts(d)) >= 10, ]
   d <- DESeq(d)
-  results(d, contrast = c("treatment", "drought_stress", "control"), alpha = 0.05)
+  results(d, contrast = c("treatment", "drought_stress", "control", "environment"), alpha = 0.05)
 }
 
 res_field <- fit_deseq(meta$environment == "field")

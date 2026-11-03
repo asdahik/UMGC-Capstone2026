@@ -62,7 +62,7 @@ output.write("Metabolite\tgini_coefficient\n")
 gini = pd.Series(rf.feature_importances_, index=[label[m] + f" ({m})" for m in mst])
 print("\nTop 15 metabolites (Gini importance):")
 print(gini.sort_values(ascending=False).head(15).round(4))
-output.write((gini.sort_values(ascending=False).head(15).round(4)).to_string())
+output.write((gini.sort_values(ascending=False).head(len(gini)).round(4)).to_string())
 # ------ Honest estimate: hold out whole cultivars ------
 # Each cultivar appears in bot train and validation with the same label, so 
 # the numbers above should partly reflect recognising the cultivar. Held-out
