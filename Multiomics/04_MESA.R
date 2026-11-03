@@ -175,3 +175,47 @@ if (nrow(res_m) > 0 && length(ora_all) > 0) {
   cat("\nPathways with raw p < 0.05 in both GSEA and ORA: ", length(both), "\n", sep = "")
   if (length(both) > 0) print(k2n[k2n$term %in% both, ])
 }
+ 
+# ---- 6. Cross-layer pathway table (RNA + protein + metabolite) -----------
+norm_ko <- function(x) paste0("ko", sub("^[A-Za-z]+", "", x))
+read_layer <- function(path, tag) {
+  if (is.na(path) || !file.exists(path)) {
+    message("Layer '", tag, "' not found, skipped: ", path); return(NULL)
+  }
+  d <- read.csv(path, stringsAsFactors = FALSE)
+  tibble(ID = norm_ko(d$ID), NES = d$NES, padj = d$p.adjust, pval = d$pvalue) %>%
+    rename_with(~ paste0(.x, "_", tag), -ID)
+}
+layers <- list(
+  read_layer(if (!is.na(PRJNA)) file.path(mo_dir, paste0(PRJNA, "_gsea_KEGG.csv")) else NA, "RNA"),
+  read_layer(file.path(wd, "Multiomics", "results",
+                       paste0(PXD,"_proteomics_GSEA_KEGG.csv")), "Protein"),
+  read_layer(file.path(mo_dir, "metabolite_gsea_KEGG.csv"), "Metabolite")
+)
+layers <- Filter(Negate(is.null), layers)
+ 
+if (length(layers) >= 2) {
+  integ <- Reduce(function(a, b) full_join(a, b, by = "ID"), layers) %>%
+    left_join(k2n_raw %>% rename(ID = term, Pathway = name), by = "ID")
+  nes_cols  <- grep("^NES_",  colnames(integ), value = TRUE)
+  padj_cols <- grep("^padj_", colnames(integ), value = TRUE)
+  integ$n_layers      <- rowSums(!is.na(integ[, nes_cols, drop = FALSE]))
+  integ$n_sig         <- rowSums(integ[, padj_cols, drop = FALSE] < 0.05, na.rm = TRUE)
+  integ$same_sign_all <- apply(integ[, nes_cols, drop = FALSE], 1, function(x) {
+    x <- x[!is.na(x)]; length(x) >= 2 && (all(x > 0) || all(x < 0))
+  })
+  integ <- integ %>% arrange(desc(n_sig), desc(same_sign_all), desc(n_layers))
+  write.csv(integ, file.path(mo_dir, "KEGG_pathway_integration.csv"), row.names = FALSE)
+  cat("\nCross-layer table written: ", nrow(integ), " pathways, ",
+      sum(integ$n_layers >= 2 & integ$same_sign_all, na.rm = TRUE),
+      " with the same direction in 2+ layers\n", sep = "")
+  print(head(integ %>% select(Pathway, starts_with("NES_"), n_sig), 15))
+} else {
+  message("Fewer than two layers available; cross-layer table not written.")
+}
+ 
+message("\nDone. Outputs in: ", out_dir)
+# test correlation between found values
+ok <- complete.cases(integ$NES_RNA, integ$NES_Protein)
+cor.test(integ$NES_RNA[ok], integ$NES_Protein[ok], method = "spearman")
+plot(integ$NES_RNA[ok], integ$NES_Protein[ok])   # or ggplot with labels for the significant one
